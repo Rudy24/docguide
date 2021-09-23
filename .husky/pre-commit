@@ -1,0 +1,8 @@
+#!/bin/sh
+. "$(dirname "$0")/_/husky.sh"
+
+# eslint 检测
+npm run lint:lint-staged
+
+# 格式化检测
+npm run lint:pretty
