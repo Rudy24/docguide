@@ -14,7 +14,7 @@
   "[javascript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "cSpell.words": ["vuex"],
+  "cSpell.words": ["lintstagedrc", "vuex"],
   "stylelint.additionalDocumentSelectors": ["vue"],
   "[vue]": {
     "editor.defaultFormatter": "dbaeumer.vscode-eslint"

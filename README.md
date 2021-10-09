@@ -1,10 +1,10 @@
 <!--
  * @Author: 宋绍华
  * @Date: 2021-09-17 10:16:41
- * @LastEditTime: 2021-09-23 19:52:45
+ * @LastEditTime: 2021-10-09 11:19:28
  * @LastEditors: 宋绍华
  * @Description:
- * @FilePath: \docguide-master\README.md
+ * @FilePath: \docguide\README.md
 -->
 
 ## 启动命令
@@ -12,6 +12,7 @@
 1. npm run serve 开启本地环境
 2. npm run build 构建打包
 3. npm run cm "提交的注释，但是要遵循 commitlint 规范", 例如 npm run cm "feat: 新功能开发",但是对于新建的分支，还是需要手动推送到远端
+4. npm run analysis 执行包分析
 
 ## 规范
 
