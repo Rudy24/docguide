@@ -1,7 +1,7 @@
 /*
  * @Author: 宋绍华
  * @Date: 2021-09-17 10:16:41
- * @LastEditTime: 2021-10-09 11:11:49
+ * @LastEditTime: 2022-08-22 11:23:21
  * @LastEditors: 宋绍华
  * @Description:
  * @FilePath: \docguide\.eslintrc.js
@@ -11,7 +11,7 @@ module.exports = {
   env: {
     node: true
   },
-  extends: ['@vue/airbnb', '@vue/typescript/recommended', 'plugin:vue/vue3-recommended'],
+  extends: ['@vue/airbnb', '@vue/typescript/recommended'],
   parserOptions: {
     ecmaVersion: 2020
   },

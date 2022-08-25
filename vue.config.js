@@ -1,7 +1,7 @@
 /*
  * @Author: 宋绍华
  * @Date: 2021-10-09 10:48:28
- * @LastEditTime: 2021-10-09 10:58:56
+ * @LastEditTime: 2022-08-22 14:20:39
  * @LastEditors: 宋绍华
  * @Description:
  * @FilePath: \docguide\vue.config.js
@@ -14,7 +14,7 @@ module.exports = {
   // 将构建好的文件输出到哪里（或者说将编译的文件）
   outputDir: 'dist',
   // 放置静态资源的地方 (js/css/img/font/...)
-  assetsDir: '',
+  assetsDir: 'assets',
   // 用于多页配置，默认是 undefined
   // 是否在保存的时候使用 `eslint-loader` 进行检查。
   // 有效的值：`ture` | `false` | `"error"`
@@ -32,7 +32,16 @@ module.exports = {
   productionSourceMap: false,
   // 调整内部的 webpack 配置。
   // 查阅 https://github.com/vuejs/vue-docs-zh-cn/blob/master/vue-cli/webpack.md
-  // chainWebpack: () => {},
+  chainWebpack: (config) => {
+    config.module
+      .rule('scss')
+      .oneOf('vue')
+      .use('px2rem-loader')
+      .loader('px2rem-loader')
+      .before('postcss-loader') // this makes it work.
+      .options({ remUnit: 75, remPrecision: 8 })
+      .end()
+  },
   configureWebpack: (config) => {
     if (process.env.NODE_ENV === 'production') {
       // 为生产环境修改配置
